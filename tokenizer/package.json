@@ -1,0 +1,20 @@
+{
+  "name": "deploy-platform-tokenizer",
+  "version": "1.0.0",
+  "description": "Batch tokenizer: processes raw HTML templates via Claude API into {{token}} placeholders + schema.json",
+  "type": "module",
+  "scripts": {
+    "tokenize": "tsx src/index.ts",
+    "tokenize:single": "tsx src/index.ts --template"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.4.5",
+    "p-limit": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
