@@ -4,7 +4,8 @@
   "description": "Batch tokenizer: processes raw HTML templates via Claude API into {{token}} placeholders + schema.json",
   "type": "module",
   "scripts": {
-    "tokenize": "tsx src/index.ts",
+    "tokenize": "node index.js --input ../templates/raw --output ../templates/processed",
+    "tokenize:ts": "tsx src/index.ts",
     "tokenize:single": "tsx src/index.ts --template"
   },
   "dependencies": {
