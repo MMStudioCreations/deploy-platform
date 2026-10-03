@@ -7,11 +7,25 @@
     "schema": "processed/abstack-angular-admin-dashboard-template-2026-02-04-13-48-35-utc/schema.json"
   },
   {
+    "id": "adina-business-finance-html-template-2024-11-24-05-05-18-utc",
+    "name": "Adina Business Finance Html Template 2024 11 24 05 05 18 Utc",
+    "category": "corporate",
+    "preview": "processed/adina-business-finance-html-template-2024-11-24-05-05-18-utc/index.html",
+    "schema": "processed/adina-business-finance-html-template-2024-11-24-05-05-18-utc/schema.json"
+  },
+  {
     "id": "adina-business-finance-react-jstemplate-2024-11-24-05-07-19-utc",
     "name": "Adina Business Finance React Jstemplate 2024 11 24 05 07 19 Utc",
     "category": "corporate",
     "preview": "processed/adina-business-finance-react-jstemplate-2024-11-24-05-07-19-utc/index.html",
     "schema": "processed/adina-business-finance-react-jstemplate-2024-11-24-05-07-19-utc/schema.json"
+  },
+  {
+    "id": "adminto-flask-admin-dashboard-template-2026-01-21-13-21-05-utc",
+    "name": "Adminto Flask Admin Dashboard Template 2026 01 21 13 21 05 Utc",
+    "category": "general",
+    "preview": "processed/adminto-flask-admin-dashboard-template-2026-01-21-13-21-05-utc/index.html",
+    "schema": "processed/adminto-flask-admin-dashboard-template-2026-01-21-13-21-05-utc/schema.json"
   },
   {
     "id": "adova-creative-portfolio-template-2023-11-27-05-15-28-utc",
@@ -28,6 +42,20 @@
     "schema": "processed/advicx-business-consulting-codeigniter-template-2026-02-04-17-52-35-utc/schema.json"
   },
   {
+    "id": "advicx-django-business-consulting-template-2026-01-22-10-13-51-utc",
+    "name": "Advicx Django Business Consulting Template 2026 01 22 10 13 51 Utc",
+    "category": "corporate",
+    "preview": "processed/advicx-django-business-consulting-template-2026-01-22-10-13-51-utc/index.html",
+    "schema": "processed/advicx-django-business-consulting-template-2026-01-22-10-13-51-utc/schema.json"
+  },
+  {
+    "id": "aeolla-creative-agency-portfolio-html-template-2026-02-04-07-00-43-utc",
+    "name": "Aeolla Creative Agency Portfolio Html Template 2026 02 04 07 00 43 Utc",
+    "category": "agency",
+    "preview": "processed/aeolla-creative-agency-portfolio-html-template-2026-02-04-07-00-43-utc/index.html",
+    "schema": "processed/aeolla-creative-agency-portfolio-html-template-2026-02-04-07-00-43-utc/schema.json"
+  },
+  {
     "id": "agiletech-codeigniter-it-technology-template-2026-01-22-03-58-33-utc",
     "name": "Agiletech Codeigniter It Technology Template 2026 01 22 03 58 33 Utc",
     "category": "general",
@@ -35,11 +63,32 @@
     "schema": "processed/agiletech-codeigniter-it-technology-template-2026-01-22-03-58-33-utc/schema.json"
   },
   {
+    "id": "aiforge-multipurpose-ai-saas-startup-html-templa-2025-07-10-04-16-48-utc",
+    "name": "Aiforge Multipurpose Ai Saas Startup Html Templa 2025 07 10 04 16 48 Utc",
+    "category": "general",
+    "preview": "processed/aiforge-multipurpose-ai-saas-startup-html-templa-2025-07-10-04-16-48-utc/index.html",
+    "schema": "processed/aiforge-multipurpose-ai-saas-startup-html-templa-2025-07-10-04-16-48-utc/schema.json"
+  },
+  {
     "id": "aivora-ai-agency-technology-react-template-2025-11-29-14-18-47-utc",
     "name": "Aivora Ai Agency Technology React Template 2025 11 29 14 18 47 Utc",
     "category": "agency",
     "preview": "processed/aivora-ai-agency-technology-react-template-2025-11-29-14-18-47-utc/index.html",
     "schema": "processed/aivora-ai-agency-technology-react-template-2025-11-29-14-18-47-utc/schema.json"
+  },
+  {
+    "id": "allstore-multiconcept-ecommerce-shop-template-2023-11-27-05-37-27-utc",
+    "name": "Allstore Multiconcept Ecommerce Shop Template 2023 11 27 05 37 27 Utc",
+    "category": "ecommerce",
+    "preview": "processed/allstore-multiconcept-ecommerce-shop-template-2023-11-27-05-37-27-utc/index.html",
+    "schema": "processed/allstore-multiconcept-ecommerce-shop-template-2023-11-27-05-37-27-utc/schema.json"
+  },
+  {
+    "id": "anvogue-multipurpose-ecommerce-html-template-2024-12-16-07-11-06-utc",
+    "name": "Anvogue Multipurpose Ecommerce Html Template 2024 12 16 07 11 06 Utc",
+    "category": "ecommerce",
+    "preview": "processed/anvogue-multipurpose-ecommerce-html-template-2024-12-16-07-11-06-utc/index.html",
+    "schema": "processed/anvogue-multipurpose-ecommerce-html-template-2024-12-16-07-11-06-utc/schema.json"
   },
   {
     "id": "apitex-mobile-banking-angular-app-pwa-2024-11-27-08-12-46-utc",
@@ -54,6 +103,48 @@
     "category": "general",
     "preview": "processed/appzia-flutter-admin-panel-2026-01-25-04-16-58-utc/index.html",
     "schema": "processed/appzia-flutter-admin-panel-2026-01-25-04-16-58-utc/schema.json"
+  },
+  {
+    "id": "architecture-interior-design-html5-template-2026-01-01-08-34-24-utc",
+    "name": "Architecture Interior Design Html5 Template 2026 01 01 08 34 24 Utc",
+    "category": "agency",
+    "preview": "processed/architecture-interior-design-html5-template-2026-01-01-08-34-24-utc/index.html",
+    "schema": "processed/architecture-interior-design-html5-template-2026-01-01-08-34-24-utc/schema.json"
+  },
+  {
+    "id": "artlink-django-landing-template-2026-01-20-05-08-17-utc",
+    "name": "Artlink Django Landing Template 2026 01 20 05 08 17 Utc",
+    "category": "general",
+    "preview": "processed/artlink-django-landing-template-2026-01-20-05-08-17-utc/index.html",
+    "schema": "processed/artlink-django-landing-template-2026-01-20-05-08-17-utc/schema.json"
+  },
+  {
+    "id": "babet-pet-care-shop-html-template-2026-02-01-22-09-33-utc",
+    "name": "Babet Pet Care Shop Html Template 2026 02 01 22 09 33 Utc",
+    "category": "ecommerce",
+    "preview": "processed/babet-pet-care-shop-html-template-2026-02-01-22-09-33-utc/index.html",
+    "schema": "processed/babet-pet-care-shop-html-template-2026-02-01-22-09-33-utc/schema.json"
+  },
+  {
+    "id": "babun-business-finance-html5-rtl-template-2025-03-21-05-36-17-utc",
+    "name": "Babun Business Finance Html5 Rtl Template 2025 03 21 05 36 17 Utc",
+    "category": "corporate",
+    "preview": "processed/babun-business-finance-html5-rtl-template-2025-03-21-05-36-17-utc/index.html",
+    "schema": "processed/babun-business-finance-html5-rtl-template-2025-03-21-05-36-17-utc/schema.json"
+  },
+  {
+    "id": "brevon-business-consulting-html-template-2026-01-19-04-50-13-utc",
+    "name": "Brevon Business Consulting Html Template 2026 01 19 04 50 13 Utc",
+    "category": "corporate",
+    "preview": "processed/brevon-business-consulting-html-template-2026-01-19-04-50-13-utc/index.html",
+    "schema": "processed/brevon-business-consulting-html-template-2026-01-19-04-50-13-utc/schema.json"
+  },
+  {
+    "id": "churche-church-religion-charity-html-template-2026-01-22-11-33-10-utc",
+    "name": "Churche Church Religion Charity Html Template 2026 01 22 11 33 10 Utc",
+    "category": "general",
+    "preview": "processed/churche-church-religion-charity-html-template-2026-01-22-11-33-10-utc/index.html",
+    "schema": "processed/churche-church-religion-charity-html-template-2026-01-22-11-33-10-utc/schema.json"
   },
   {
     "id": "cityride-online-taxi-service-html-template-2026-01-19-06-24-07-utc",
@@ -91,11 +182,25 @@
     "schema": "processed/dating-mobile-app-pwa-react-template-romio-2026-01-29-04-54-15-utc/schema.json"
   },
   {
+    "id": "davies-personal-portfolio-html-template-2025-11-16-16-03-47-utc",
+    "name": "Davies Personal Portfolio Html Template 2025 11 16 16 03 47 Utc",
+    "category": "portfolio",
+    "preview": "processed/davies-personal-portfolio-html-template-2025-11-16-16-03-47-utc/index.html",
+    "schema": "processed/davies-personal-portfolio-html-template-2025-11-16-16-03-47-utc/schema.json"
+  },
+  {
     "id": "destin-react-landing-page-template-2026-02-04-05-34-19-utc",
     "name": "Destin React Landing Page Template 2026 02 04 05 34 19 Utc",
     "category": "general",
     "preview": "processed/destin-react-landing-page-template-2026-02-04-05-34-19-utc/index.html",
     "schema": "processed/destin-react-landing-page-template-2026-02-04-05-34-19-utc/schema.json"
+  },
+  {
+    "id": "digital-agency-creative-portfolio-template-2023-11-27-05-29-24-utc",
+    "name": "Digital Agency Creative Portfolio Template 2023 11 27 05 29 24 Utc",
+    "category": "agency",
+    "preview": "processed/digital-agency-creative-portfolio-template-2023-11-27-05-29-24-utc/index.html",
+    "schema": "processed/digital-agency-creative-portfolio-template-2023-11-27-05-29-24-utc/schema.json"
   },
   {
     "id": "domania-domain-for-sell-django-template-2026-01-20-05-06-17-utc",
@@ -105,6 +210,27 @@
     "schema": "processed/domania-domain-for-sell-django-template-2026-01-20-05-06-17-utc/schema.json"
   },
   {
+    "id": "econest-ecology-environment-django-template-2026-02-02-10-05-34-utc",
+    "name": "Econest Ecology Environment Django Template 2026 02 02 10 05 34 Utc",
+    "category": "general",
+    "preview": "processed/econest-ecology-environment-django-template-2026-02-02-10-05-34-utc/index.html",
+    "schema": "processed/econest-ecology-environment-django-template-2026-02-02-10-05-34-utc/schema.json"
+  },
+  {
+    "id": "econest-ecology-environment-flask-template-2026-01-27-06-45-43-utc",
+    "name": "Econest Ecology Environment Flask Template 2026 01 27 06 45 43 Utc",
+    "category": "general",
+    "preview": "processed/econest-ecology-environment-flask-template-2026-01-27-06-45-43-utc/index.html",
+    "schema": "processed/econest-ecology-environment-flask-template-2026-01-27-06-45-43-utc/schema.json"
+  },
+  {
+    "id": "eduall-tailwind-education-tutors-lms-online-2026-01-20-08-44-18-utc",
+    "name": "Eduall Tailwind Education Tutors Lms Online 2026 01 20 08 44 18 Utc",
+    "category": "education",
+    "preview": "processed/eduall-tailwind-education-tutors-lms-online-2026-01-20-08-44-18-utc/index.html",
+    "schema": "processed/eduall-tailwind-education-tutors-lms-online-2026-01-20-08-44-18-utc/schema.json"
+  },
+  {
     "id": "eduall-vue-js-education-tutors-lms-online-2026-01-20-08-13-11-utc",
     "name": "Eduall Vue Js Education Tutors Lms Online 2026 01 20 08 13 11 Utc",
     "category": "education",
@@ -112,11 +238,32 @@
     "schema": "processed/eduall-vue-js-education-tutors-lms-online-2026-01-20-08-13-11-utc/schema.json"
   },
   {
+    "id": "edudash-education-management-admin-dashboard-2026-02-05-12-34-30-utc",
+    "name": "Edudash Education Management Admin Dashboard 2026 02 05 12 34 30 Utc",
+    "category": "education",
+    "preview": "processed/edudash-education-management-admin-dashboard-2026-02-05-12-34-30-utc/index.html",
+    "schema": "processed/edudash-education-management-admin-dashboard-2026-02-05-12-34-30-utc/schema.json"
+  },
+  {
+    "id": "fitrainer-gym-fitness-html-templates-2026-01-22-10-02-48-utc",
+    "name": "Fitrainer Gym Fitness Html Templates 2026 01 22 10 02 48 Utc",
+    "category": "fitness",
+    "preview": "processed/fitrainer-gym-fitness-html-templates-2026-01-22-10-02-48-utc/index.html",
+    "schema": "processed/fitrainer-gym-fitness-html-templates-2026-01-22-10-02-48-utc/schema.json"
+  },
+  {
     "id": "flutter-admin-panel-upzet-2026-01-20-05-09-57-utc",
     "name": "Flutter Admin Panel Upzet 2026 01 20 05 09 57 Utc",
     "category": "general",
     "preview": "processed/flutter-admin-panel-upzet-2026-01-20-05-09-57-utc/index.html",
     "schema": "processed/flutter-admin-panel-upzet-2026-01-20-05-09-57-utc/schema.json"
+  },
+  {
+    "id": "foxden-photography-portfolio-template-2025-06-23-07-18-22-utc",
+    "name": "Foxden Photography Portfolio Template 2025 06 23 07 18 22 Utc",
+    "category": "portfolio",
+    "preview": "processed/foxden-photography-portfolio-template-2025-06-23-07-18-22-utc/index.html",
+    "schema": "processed/foxden-photography-portfolio-template-2025-06-23-07-18-22-utc/schema.json"
   },
   {
     "id": "harold-react-19-personal-portfolio-template-2026-01-25-04-23-57-utc",
@@ -140,11 +287,53 @@
     "schema": "processed/herozi-flask-admin-dashboard-template-2026-01-30-04-42-33-utc/schema.json"
   },
   {
+    "id": "highdmin-django-admin-dashboard-template-2026-02-04-13-49-35-utc",
+    "name": "Highdmin Django Admin Dashboard Template 2026 02 04 13 49 35 Utc",
+    "category": "general",
+    "preview": "processed/highdmin-django-admin-dashboard-template-2026-02-04-13-49-35-utc/index.html",
+    "schema": "processed/highdmin-django-admin-dashboard-template-2026-02-04-13-49-35-utc/schema.json"
+  },
+  {
+    "id": "horsera-horse-riding-school-club-html-template-2026-01-19-05-07-48-utc",
+    "name": "Horsera Horse Riding School Club Html Template 2026 01 19 05 07 48 Utc",
+    "category": "education",
+    "preview": "processed/horsera-horse-riding-school-club-html-template-2026-01-19-05-07-48-utc/index.html",
+    "schema": "processed/horsera-horse-riding-school-club-html-template-2026-01-19-05-07-48-utc/schema.json"
+  },
+  {
     "id": "imroz-agency-and-portfolio-symfony-template-2026-01-23-10-34-46-utc",
     "name": "Imroz Agency And Portfolio Symfony Template 2026 01 23 10 34 46 Utc",
     "category": "agency",
     "preview": "processed/imroz-agency-and-portfolio-symfony-template-2026-01-23-10-34-46-utc/index.html",
     "schema": "processed/imroz-agency-and-portfolio-symfony-template-2026-01-23-10-34-46-utc/schema.json"
+  },
+  {
+    "id": "infitech-agency-it-service-html-template-2026-01-19-05-42-25-utc",
+    "name": "Infitech Agency It Service Html Template 2026 01 19 05 42 25 Utc",
+    "category": "agency",
+    "preview": "processed/infitech-agency-it-service-html-template-2026-01-19-05-42-25-utc/index.html",
+    "schema": "processed/infitech-agency-it-service-html-template-2026-01-19-05-42-25-utc/schema.json"
+  },
+  {
+    "id": "innovatex-digital-agency-html-template-2025-08-17-09-22-39-utc",
+    "name": "Innovatex Digital Agency Html Template 2025 08 17 09 22 39 Utc",
+    "category": "agency",
+    "preview": "processed/innovatex-digital-agency-html-template-2025-08-17-09-22-39-utc/index.html",
+    "schema": "processed/innovatex-digital-agency-html-template-2025-08-17-09-22-39-utc/schema.json"
+  },
+  {
+    "id": "intereal-architecture-interior-design-html-tem-2026-01-22-10-27-56-utc",
+    "name": "Intereal Architecture Interior Design Html Tem 2026 01 22 10 27 56 Utc",
+    "category": "agency",
+    "preview": "processed/intereal-architecture-interior-design-html-tem-2026-01-22-10-27-56-utc/index.html",
+    "schema": "processed/intereal-architecture-interior-design-html-tem-2026-01-22-10-27-56-utc/schema.json"
+  },
+  {
+    "id": "jobya-django-job-board-job-listing-template-2026-01-25-04-10-53-utc",
+    "name": "Jobya Django Job Board Job Listing Template 2026 01 25 04 10 53 Utc",
+    "category": "general",
+    "preview": "processed/jobya-django-job-board-job-listing-template-2026-01-25-04-10-53-utc/index.html",
+    "schema": "processed/jobya-django-job-board-job-listing-template-2026-01-25-04-10-53-utc/schema.json"
   },
   {
     "id": "keyra-multi-chain-crypto-wallet-app-ui-ux-expo-2026-01-23-07-50-59-utc",
@@ -203,6 +392,13 @@
     "schema": "processed/mighty-creative-and-digital-agency-html-template-2024-10-03-09-19-49-utc/schema.json"
   },
   {
+    "id": "minifolio-personal-portfolio-html-template-2025-08-26-05-05-06-utc",
+    "name": "Minifolio Personal Portfolio Html Template 2025 08 26 05 05 06 Utc",
+    "category": "portfolio",
+    "preview": "processed/minifolio-personal-portfolio-html-template-2025-08-26-05-05-06-utc/index.html",
+    "schema": "processed/minifolio-personal-portfolio-html-template-2025-08-26-05-05-06-utc/schema.json"
+  },
+  {
     "id": "modzy-react-landing-page-template-2026-01-20-05-03-16-utc",
     "name": "Modzy React Landing Page Template 2026 01 20 05 03 16 Utc",
     "category": "general",
@@ -222,6 +418,27 @@
     "category": "portfolio",
     "preview": "processed/monas-personal-portfolio-html-template-2025-07-28-18-20-27-utc/index.html",
     "schema": "processed/monas-personal-portfolio-html-template-2025-07-28-18-20-27-utc/schema.json"
+  },
+  {
+    "id": "nafty-crypto-and-nft-flask-template-2026-01-21-06-01-21-utc",
+    "name": "Nafty Crypto And Nft Flask Template 2026 01 21 06 01 21 Utc",
+    "category": "general",
+    "preview": "processed/nafty-crypto-and-nft-flask-template-2026-01-21-06-01-21-utc/index.html",
+    "schema": "processed/nafty-crypto-and-nft-flask-template-2026-01-21-06-01-21-utc/schema.json"
+  },
+  {
+    "id": "nazox-bootstrap-5-admin-dashboard-template-2026-02-04-05-34-21-utc",
+    "name": "Nazox Bootstrap 5 Admin Dashboard Template 2026 02 04 05 34 21 Utc",
+    "category": "general",
+    "preview": "processed/nazox-bootstrap-5-admin-dashboard-template-2026-02-04-05-34-21-utc/index.html",
+    "schema": "processed/nazox-bootstrap-5-admin-dashboard-template-2026-02-04-05-34-21-utc/schema.json"
+  },
+  {
+    "id": "neotix-it-service-and-technology-html-template-2026-01-19-05-07-47-utc",
+    "name": "Neotix It Service And Technology Html Template 2026 01 19 05 07 47 Utc",
+    "category": "general",
+    "preview": "processed/neotix-it-service-and-technology-html-template-2026-01-19-05-07-47-utc/index.html",
+    "schema": "processed/neotix-it-service-and-technology-html-template-2026-01-19-05-07-47-utc/schema.json"
   },
   {
     "id": "nexora-multipurpose-business-html5-template-2026-02-04-05-17-13-utc",
@@ -245,11 +462,53 @@
     "schema": "processed/nuton-online-learning-next-js-mobile-app-pwa-2025-03-25-06-41-20-utc/schema.json"
   },
   {
+    "id": "opatix-tailwind-css-admin-layout-ui-kit-2026-01-30-07-17-15-utc",
+    "name": "Opatix Tailwind Css Admin Layout Ui Kit 2026 01 30 07 17 15 Utc",
+    "category": "general",
+    "preview": "processed/opatix-tailwind-css-admin-layout-ui-kit-2026-01-30-07-17-15-utc/index.html",
+    "schema": "processed/opatix-tailwind-css-admin-layout-ui-kit-2026-01-30-07-17-15-utc/schema.json"
+  },
+  {
+    "id": "open9-nft-marketplace-html-template-2024-09-11-08-50-51-utc",
+    "name": "Open9 Nft Marketplace Html Template 2024 09 11 08 50 51 Utc",
+    "category": "general",
+    "preview": "processed/open9-nft-marketplace-html-template-2024-09-11-08-50-51-utc/index.html",
+    "schema": "processed/open9-nft-marketplace-html-template-2024-09-11-08-50-51-utc/schema.json"
+  },
+  {
+    "id": "opixo-django-landing-coming-soon-template-2026-02-04-14-01-32-utc",
+    "name": "Opixo Django Landing Coming Soon Template 2026 02 04 14 01 32 Utc",
+    "category": "general",
+    "preview": "processed/opixo-django-landing-coming-soon-template-2026-02-04-14-01-32-utc/index.html",
+    "schema": "processed/opixo-django-landing-coming-soon-template-2026-02-04-14-01-32-utc/schema.json"
+  },
+  {
+    "id": "phone-and-gadget-repair-service-bootstrap-template-2025-06-06-06-21-40-utc",
+    "name": "Phone And Gadget Repair Service Bootstrap Template 2025 06 06 06 21 40 Utc",
+    "category": "general",
+    "preview": "processed/phone-and-gadget-repair-service-bootstrap-template-2025-06-06-06-21-40-utc/index.html",
+    "schema": "processed/phone-and-gadget-repair-service-bootstrap-template-2025-06-06-06-21-40-utc/schema.json"
+  },
+  {
+    "id": "pixelr-creative-agency-portfolio-html-template-2026-01-19-04-46-10-utc",
+    "name": "Pixelr Creative Agency Portfolio Html Template 2026 01 19 04 46 10 Utc",
+    "category": "agency",
+    "preview": "processed/pixelr-creative-agency-portfolio-html-template-2026-01-19-04-46-10-utc/index.html",
+    "schema": "processed/pixelr-creative-agency-portfolio-html-template-2026-01-19-04-46-10-utc/schema.json"
+  },
+  {
     "id": "potu-creative-agency-portfolio-html-template-2024-11-18-10-14-44-utc",
     "name": "Potu Creative Agency Portfolio Html Template 2024 11 18 10 14 44 Utc",
     "category": "agency",
     "preview": "processed/potu-creative-agency-portfolio-html-template-2024-11-18-10-14-44-utc/index.html",
     "schema": "processed/potu-creative-agency-portfolio-html-template-2024-11-18-10-14-44-utc/schema.json"
+  },
+  {
+    "id": "pubzi-esports-and-gaming-html-template-2025-09-22-12-44-07-utc",
+    "name": "Pubzi Esports And Gaming Html Template 2025 09 22 12 44 07 Utc",
+    "category": "fitness",
+    "preview": "processed/pubzi-esports-and-gaming-html-template-2025-09-22-12-44-07-utc/index.html",
+    "schema": "processed/pubzi-esports-and-gaming-html-template-2025-09-22-12-44-07-utc/schema.json"
   },
   {
     "id": "qzain-multiple-test-quiz-templates-2026-01-19-09-52-51-utc",
@@ -273,11 +532,74 @@
     "schema": "processed/reboost-digital-marketing-agency-html-template-2025-09-24-12-57-18-utc/schema.json"
   },
   {
+    "id": "restin-luxury-hotel-booking-html-template-2026-01-19-04-58-15-utc",
+    "name": "Restin Luxury Hotel Booking Html Template 2026 01 19 04 58 15 Utc",
+    "category": "general",
+    "preview": "processed/restin-luxury-hotel-booking-html-template-2026-01-19-04-58-15-utc/index.html",
+    "schema": "processed/restin-luxury-hotel-booking-html-template-2026-01-19-04-58-15-utc/schema.json"
+  },
+  {
     "id": "rifma-multistep-quiz-wizard-signup-template-2026-01-20-13-15-29-utc",
     "name": "Rifma Multistep Quiz Wizard Signup Template 2026 01 20 13 15 29 Utc",
     "category": "general",
     "preview": "processed/rifma-multistep-quiz-wizard-signup-template-2026-01-20-13-15-29-utc/index.html",
     "schema": "processed/rifma-multistep-quiz-wizard-signup-template-2026-01-20-13-15-29-utc/schema.json"
+  },
+  {
+    "id": "roger-day-personal-cv-resume-html-template-2025-01-11-10-15-30-utc",
+    "name": "Roger Day Personal Cv Resume Html Template 2025 01 11 10 15 30 Utc",
+    "category": "portfolio",
+    "preview": "processed/roger-day-personal-cv-resume-html-template-2025-01-11-10-15-30-utc/index.html",
+    "schema": "processed/roger-day-personal-cv-resume-html-template-2025-01-11-10-15-30-utc/schema.json"
+  },
+  {
+    "id": "royalcars-vehicle-rental-html-template-2026-01-21-09-35-12-utc",
+    "name": "Royalcars Vehicle Rental Html Template 2026 01 21 09 35 12 Utc",
+    "category": "general",
+    "preview": "processed/royalcars-vehicle-rental-html-template-2026-01-21-09-35-12-utc/index.html",
+    "schema": "processed/royalcars-vehicle-rental-html-template-2026-01-21-09-35-12-utc/schema.json"
+  },
+  {
+    "id": "ruxe-ai-agency-technology-html-template-2026-01-29-06-42-45-utc",
+    "name": "Ruxe Ai Agency Technology Html Template 2026 01 29 06 42 45 Utc",
+    "category": "agency",
+    "preview": "processed/ruxe-ai-agency-technology-html-template-2026-01-29-06-42-45-utc/index.html",
+    "schema": "processed/ruxe-ai-agency-technology-html-template-2026-01-29-06-42-45-utc/schema.json"
+  },
+  {
+    "id": "ryen-king-personal-cv-resume-html-template-2023-11-27-05-16-40-utc",
+    "name": "Ryen King Personal Cv Resume Html Template 2023 11 27 05 16 40 Utc",
+    "category": "portfolio",
+    "preview": "processed/ryen-king-personal-cv-resume-html-template-2023-11-27-05-16-40-utc/index.html",
+    "schema": "processed/ryen-king-personal-cv-resume-html-template-2023-11-27-05-16-40-utc/schema.json"
+  },
+  {
+    "id": "saas-company-website-template-2024-10-16-13-20-25-utc",
+    "name": "Saas Company Website Template 2024 10 16 13 20 25 Utc",
+    "category": "general",
+    "preview": "processed/saas-company-website-template-2024-10-16-13-20-25-utc/index.html",
+    "schema": "processed/saas-company-website-template-2024-10-16-13-20-25-utc/schema.json"
+  },
+  {
+    "id": "silva-flask-admin-dashboard-template-2026-01-26-04-22-17-utc",
+    "name": "Silva Flask Admin Dashboard Template 2026 01 26 04 22 17 Utc",
+    "category": "general",
+    "preview": "processed/silva-flask-admin-dashboard-template-2026-01-26-04-22-17-utc/index.html",
+    "schema": "processed/silva-flask-admin-dashboard-template-2026-01-26-04-22-17-utc/schema.json"
+  },
+  {
+    "id": "sintix-gaming-studio-html-template-2024-08-26-18-54-07-utc",
+    "name": "Sintix Gaming Studio Html Template 2024 08 26 18 54 07 Utc",
+    "category": "agency",
+    "preview": "processed/sintix-gaming-studio-html-template-2024-08-26-18-54-07-utc/index.html",
+    "schema": "processed/sintix-gaming-studio-html-template-2024-08-26-18-54-07-utc/schema.json"
+  },
+  {
+    "id": "stackly-app-landing-ai-software-business-html-2026-01-18-10-40-51-utc",
+    "name": "Stackly App Landing Ai Software Business Html 2026 01 18 10 40 51 Utc",
+    "category": "corporate",
+    "preview": "processed/stackly-app-landing-ai-software-business-html-2026-01-18-10-40-51-utc/index.html",
+    "schema": "processed/stackly-app-landing-ai-software-business-html-2026-01-18-10-40-51-utc/schema.json"
   },
   {
     "id": "stephub-shoes-store-app-with-backend-2024-08-07-09-39-19-utc",
@@ -299,5 +621,89 @@
     "category": "general",
     "preview": "processed/techbutton-tailwind-css-3-button-html-template-2024-12-05-11-57-40-utc/index.html",
     "schema": "processed/techbutton-tailwind-css-3-button-html-template-2024-12-05-11-57-40-utc/schema.json"
+  },
+  {
+    "id": "the-agency-responsive-business-html-template-2023-11-27-05-13-56-utc",
+    "name": "The Agency Responsive Business Html Template 2023 11 27 05 13 56 Utc",
+    "category": "agency",
+    "preview": "processed/the-agency-responsive-business-html-template-2023-11-27-05-13-56-utc/index.html",
+    "schema": "processed/the-agency-responsive-business-html-template-2023-11-27-05-13-56-utc/schema.json"
+  },
+  {
+    "id": "trimba-application-forms-quiz-poll-template-2026-01-22-08-18-24-utc",
+    "name": "Trimba Application Forms Quiz Poll Template 2026 01 22 08 18 24 Utc",
+    "category": "general",
+    "preview": "processed/trimba-application-forms-quiz-poll-template-2026-01-22-08-18-24-utc/index.html",
+    "schema": "processed/trimba-application-forms-quiz-poll-template-2026-01-22-08-18-24-utc/schema.json"
+  },
+  {
+    "id": "trydo-agency-and-portfolio-codeigniter-template-2026-02-02-10-05-34-utc",
+    "name": "Trydo Agency And Portfolio Codeigniter Template 2026 02 02 10 05 34 Utc",
+    "category": "agency",
+    "preview": "processed/trydo-agency-and-portfolio-codeigniter-template-2026-02-02-10-05-34-utc/index.html",
+    "schema": "processed/trydo-agency-and-portfolio-codeigniter-template-2026-02-02-10-05-34-utc/schema.json"
+  },
+  {
+    "id": "udrone-drone-uav-aerial-videography-web-template-2026-02-04-08-35-09-utc",
+    "name": "Udrone Drone Uav Aerial Videography Web Template 2026 02 04 08 35 09 Utc",
+    "category": "general",
+    "preview": "processed/udrone-drone-uav-aerial-videography-web-template-2026-02-04-08-35-09-utc/index.html",
+    "schema": "processed/udrone-drone-uav-aerial-videography-web-template-2026-02-04-08-35-09-utc/schema.json"
+  },
+  {
+    "id": "ukko-react-portfolio-template-2023-11-27-05-27-51-utc",
+    "name": "Ukko React Portfolio Template 2023 11 27 05 27 51 Utc",
+    "category": "portfolio",
+    "preview": "processed/ukko-react-portfolio-template-2023-11-27-05-27-51-utc/index.html",
+    "schema": "processed/ukko-react-portfolio-template-2023-11-27-05-27-51-utc/schema.json"
+  },
+  {
+    "id": "upbond-django-admin-dashboard-template-2026-01-25-04-13-57-utc",
+    "name": "Upbond Django Admin Dashboard Template 2026 01 25 04 13 57 Utc",
+    "category": "general",
+    "preview": "processed/upbond-django-admin-dashboard-template-2026-01-25-04-13-57-utc/index.html",
+    "schema": "processed/upbond-django-admin-dashboard-template-2026-01-25-04-13-57-utc/schema.json"
+  },
+  {
+    "id": "upcube-codeigniter-admin-dashboard-template-2026-02-04-05-34-21-utc",
+    "name": "Upcube Codeigniter Admin Dashboard Template 2026 02 04 05 34 21 Utc",
+    "category": "general",
+    "preview": "processed/upcube-codeigniter-admin-dashboard-template-2026-02-04-05-34-21-utc/index.html",
+    "schema": "processed/upcube-codeigniter-admin-dashboard-template-2026-02-04-05-34-21-utc/schema.json"
+  },
+  {
+    "id": "wallo-multi-chain-crypto-wallet-2026-01-25-17-10-14-utc",
+    "name": "Wallo Multi Chain Crypto Wallet 2026 01 25 17 10 14 Utc",
+    "category": "general",
+    "preview": "processed/wallo-multi-chain-crypto-wallet-2026-01-25-17-10-14-utc/index.html",
+    "schema": "processed/wallo-multi-chain-crypto-wallet-2026-01-25-17-10-14-utc/schema.json"
+  },
+  {
+    "id": "wallo-multi-chain-crypto-wallet-ui-ux-expo-2026-01-22-16-42-24-utc",
+    "name": "Wallo Multi Chain Crypto Wallet Ui Ux Expo 2026 01 22 16 42 24 Utc",
+    "category": "general",
+    "preview": "processed/wallo-multi-chain-crypto-wallet-ui-ux-expo-2026-01-22-16-42-24-utc/index.html",
+    "schema": "processed/wallo-multi-chain-crypto-wallet-ui-ux-expo-2026-01-22-16-42-24-utc/schema.json"
+  },
+  {
+    "id": "webadmin-django-admin-dashboard-template-2026-01-25-04-05-55-utc",
+    "name": "Webadmin Django Admin Dashboard Template 2026 01 25 04 05 55 Utc",
+    "category": "general",
+    "preview": "processed/webadmin-django-admin-dashboard-template-2026-01-25-04-05-55-utc/index.html",
+    "schema": "processed/webadmin-django-admin-dashboard-template-2026-01-25-04-05-55-utc/schema.json"
+  },
+  {
+    "id": "webfolio-creative-portfolio-react-js-template-2025-07-02-07-11-54-utc",
+    "name": "Webfolio Creative Portfolio React Js Template 2025 07 02 07 11 54 Utc",
+    "category": "agency",
+    "preview": "processed/webfolio-creative-portfolio-react-js-template-2025-07-02-07-11-54-utc/index.html",
+    "schema": "processed/webfolio-creative-portfolio-react-js-template-2025-07-02-07-11-54-utc/schema.json"
+  },
+  {
+    "id": "zelio-personal-portfolio-nextjs-react-template-2026-01-14-14-25-32-utc",
+    "name": "Zelio Personal Portfolio Nextjs React Template 2026 01 14 14 25 32 Utc",
+    "category": "portfolio",
+    "preview": "processed/zelio-personal-portfolio-nextjs-react-template-2026-01-14-14-25-32-utc/index.html",
+    "schema": "processed/zelio-personal-portfolio-nextjs-react-template-2026-01-14-14-25-32-utc/schema.json"
   }
 ]

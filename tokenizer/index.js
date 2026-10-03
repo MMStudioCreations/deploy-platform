@@ -4,6 +4,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import pLimit from 'p-limit';
+import { spawn } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -12,6 +13,13 @@ const CONCURRENCY = 1;
 const MAX_RETRIES = 5;
 const RETRY_WAIT_MS = 65_000; // 65s clears the per-minute output token bucket
 const ERRORS_LOG = path.join(__dirname, 'errors.log');
+
+// 'api' (default) bills the Anthropic API key; 'claude-cli' runs each template through
+// `claude -p` on the logged-in Claude subscription instead (no API credits needed).
+const BACKEND = process.env.TOKENIZER_BACKEND ?? 'api';
+const CLAUDE_BIN = process.env.CLAUDE_BIN ?? 'claude.exe';
+const CLI_TIMEOUT_MS = 15 * 60_000;
+const CLI_LIMIT_WAIT_MS = 30 * 60_000; // fallback when a usage-limit message has no reset time
 
 const SYSTEM_PROMPT = `You are a web template analyst. Given raw HTML, identify all human-editable content zones and return a schema only — do NOT echo back the HTML.
 
@@ -126,12 +134,71 @@ async function callWithRetry(client, params) {
   }
 }
 
+function runClaudeCli(input) {
+  // Template HTML is third-party content, so the run gets no tools, no MCP servers and no
+  // user/project settings (which also keeps hooks such as claude-mem out of these sessions).
+  const args = [
+    '-p', '--tools', '', '--strict-mcp-config', '--setting-sources', '',
+    '--no-session-persistence', '--model', 'sonnet',
+    '--system-prompt', SYSTEM_PROMPT, '--output-format', 'text',
+  ];
+  return new Promise((resolve, reject) => {
+    const child = spawn(CLAUDE_BIN, args, {
+      env: { ...process.env, CLAUDE_CODE_MAX_OUTPUT_TOKENS: '32000' },
+      windowsHide: true,
+    });
+    let out = '';
+    let err = '';
+    const timer = setTimeout(() => { child.kill(); reject(new Error('claude CLI timed out')); }, CLI_TIMEOUT_MS);
+    child.stdout.on('data', (d) => { out += d; });
+    child.stderr.on('data', (d) => { err += d; });
+    child.on('error', (e) => { clearTimeout(timer); reject(e); });
+    child.on('close', (code) => {
+      clearTimeout(timer);
+      if (code !== 0) return reject(new Error(`claude CLI exited ${code}: ${(err || out).slice(0, 300)}`));
+      resolve(out);
+    });
+    child.stdin.end(input);
+  });
+}
+
+function msUntilReset(text) {
+  const m = text.match(/resets\s+(\d{1,2})(?::(\d{2}))?\s*([ap]m)/i);
+  if (!m) return CLI_LIMIT_WAIT_MS;
+  const reset = new Date();
+  let hour = Number(m[1]) % 12 + (m[3].toLowerCase() === 'pm' ? 12 : 0);
+  reset.setHours(hour, Number(m[2] ?? 0) + 5, 0, 0);
+  if (reset <= new Date()) reset.setDate(reset.getDate() + 1);
+  return reset - new Date();
+}
+
+async function callClaudeCliWithRetry(input) {
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    let text;
+    try {
+      text = await runClaudeCli(input);
+    } catch (err) {
+      text = err.message;
+      if (!/limit/i.test(text)) throw err;
+    }
+    if (!/(session|usage|rate) limit|hit your limit/i.test(text)) return text;
+    if (attempt === MAX_RETRIES) throw new Error(`usage limit: ${text.slice(0, 200)}`);
+    const wait = msUntilReset(text);
+    process.stdout.write(`\n  ⏳ usage limit, waiting ${Math.round(wait / 60_000)} min ... `);
+    await new Promise((r) => setTimeout(r, wait));
+  }
+}
+
 async function processTemplate(client, templateId, inputDir, outputDir) {
   const templateDir = path.join(inputDir, templateId);
   const indexPath = await findIndexHtml(templateDir);
   if (!indexPath) throw new Error('No usable index.html found');
   const html = await fs.readFile(indexPath, 'utf-8');
 
+  let raw;
+  if (BACKEND === 'claude-cli') {
+    raw = await callClaudeCliWithRetry(`Template ID: "${templateId}"\n\n${html}`);
+  } else {
   const response = await callWithRetry(client, {
     model: MODEL,
     max_tokens: 16384,
@@ -145,7 +212,8 @@ async function processTemplate(client, templateId, inputDir, outputDir) {
     messages: [{ role: 'user', content: `Template ID: "${templateId}"\n\n${html}` }],
   });
 
-  const raw = response.content.find((b) => b.type === 'text')?.text ?? '';
+  raw = response.content.find((b) => b.type === 'text')?.text ?? '';
+  }
   const parsed = JSON.parse(extractJSON(raw));
 
   if (!Array.isArray(parsed.schema?.sections)) {
@@ -181,7 +249,7 @@ function parseArgs(argv) {
 
 async function main() {
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
+  if (BACKEND !== 'claude-cli' && !apiKey) {
     console.error('Error: ANTHROPIC_API_KEY not set. Copy tokenizer/.env.example to tokenizer/.env');
     process.exit(1);
   }
@@ -201,9 +269,9 @@ async function main() {
   const templateIds = entries.filter((e) => e.isDirectory()).map((e) => e.name);
   if (templateIds.length === 0) { console.log('No template directories found.'); return; }
 
-  console.log(`\nFound ${templateIds.length} templates. Concurrency: ${CONCURRENCY}\n`);
+  console.log(`\nFound ${templateIds.length} templates. Concurrency: ${CONCURRENCY}. Backend: ${BACKEND}\n`);
 
-  const client = new Anthropic({ apiKey });
+  const client = BACKEND === 'claude-cli' ? null : new Anthropic({ apiKey });
   const limit  = pLimit(CONCURRENCY);
   const manifest = [];
   const errors   = [];
