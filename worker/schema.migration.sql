@@ -1,0 +1,2 @@
+-- Consolidated into schema.sql — use that file for all fresh installs.
+-- No ALTER TABLE statements remain; schema.sql defines all tables and columns.

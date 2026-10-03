@@ -1,0 +1,12 @@
+{
+  "name": "deploy-platform-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "upload": "node upload-to-r2.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.600.0",
+    "dotenv": "^16.4.5"
+  }
+}

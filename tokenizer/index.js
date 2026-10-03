@@ -7,15 +7,18 @@ import pLimit from 'p-limit';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const MODEL = 'claude-sonnet-4-20250514';
-const CONCURRENCY = 5;
+const MODEL = 'claude-sonnet-4-6';
+const CONCURRENCY = 1;
+const MAX_RETRIES = 5;
+const RETRY_WAIT_MS = 65_000; // 65s clears the per-minute output token bucket
 const ERRORS_LOG = path.join(__dirname, 'errors.log');
 
-const SYSTEM_PROMPT = `You are a web template analyst. Given raw HTML, identify all human-editable content zones and return:
-1. A tokenized version of the HTML where editable text/images/links/colors are replaced with {{snake_case_token}} placeholders
-2. A schema.json defining each token with: key, type (text|textarea|image|url|color|phone|email), label, placeholder, and section grouping
+const SYSTEM_PROMPT = `You are a web template analyst. Given raw HTML, identify all human-editable content zones and return a schema only — do NOT echo back the HTML.
 
-Return ONLY valid JSON: { "html": "...", "schema": { "sections": [...] } }
+Return ONLY valid JSON: { "schema": { "sections": [...] } }
+
+Each section: { "name": string, "fields": [...] }
+Each field: { "key": "snake_case", "type": "text|textarea|image|url|color|phone|email", "label": string, "placeholder": string }
 
 Required base tokens every schema must include:
 - business_name (text)
@@ -66,11 +69,34 @@ function extractJSON(text) {
   return text.trim();
 }
 
+const SKIP_DIRS = /[\\/](__MACOSX|[Dd]ocumentation|[Dd]ocs|[Dd]oc)[\\/]/;
+
+async function findIndexHtml(templateDir) {
+  async function walk(dir, depth) {
+    if (depth > 5) return null;
+    let entries;
+    try { entries = await fs.readdir(dir, { withFileTypes: true }); } catch { return null; }
+    if (entries.some((e) => !e.isDirectory() && e.name === 'index.html')) {
+      const candidate = path.join(dir, 'index.html');
+      if (!SKIP_DIRS.test(candidate + path.sep)) return candidate;
+    }
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const sub = path.join(dir, entry.name);
+      if (SKIP_DIRS.test(sub + path.sep)) continue;
+      const found = await walk(sub, depth + 1);
+      if (found) return found;
+    }
+    return null;
+  }
+  return walk(templateDir, 0);
+}
+
 async function copyAssets(src, dest) {
   const entries = await fs.readdir(src, { withFileTypes: true });
   await Promise.all(
     entries.map(async (entry) => {
-      if (entry.name === 'index.html') return; // overwritten by tokenized version
+      if (entry.name === 'index.html') return;
       const srcPath = path.join(src, entry.name);
       const destPath = path.join(dest, entry.name);
       if (entry.isDirectory()) {
@@ -83,17 +109,37 @@ async function copyAssets(src, dest) {
   );
 }
 
-async function processTemplate(client, templateId, inputDir, outputDir) {
-  const html = await fs.readFile(path.join(inputDir, templateId, 'index.html'), 'utf-8');
+async function callWithRetry(client, params) {
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      return await client.messages.create(params);
+    } catch (err) {
+      const is429 = err?.status === 429 || /rate.limit/i.test(err?.message ?? '');
+      if (is429 && attempt < MAX_RETRIES) {
+        const wait = RETRY_WAIT_MS * attempt;
+        process.stdout.write(`\n  ⏳ rate-limited, waiting ${wait / 1000}s (attempt ${attempt}/${MAX_RETRIES}) ... `);
+        await new Promise((r) => setTimeout(r, wait));
+        continue;
+      }
+      throw err;
+    }
+  }
+}
 
-  const response = await client.messages.create({
+async function processTemplate(client, templateId, inputDir, outputDir) {
+  const templateDir = path.join(inputDir, templateId);
+  const indexPath = await findIndexHtml(templateDir);
+  if (!indexPath) throw new Error('No usable index.html found');
+  const html = await fs.readFile(indexPath, 'utf-8');
+
+  const response = await callWithRetry(client, {
     model: MODEL,
     max_tokens: 16384,
     system: [
       {
         type: 'text',
         text: SYSTEM_PROMPT,
-        cache_control: { type: 'ephemeral' }, // reused across all 165 calls
+        cache_control: { type: 'ephemeral' },
       },
     ],
     messages: [{ role: 'user', content: `Template ID: "${templateId}"\n\n${html}` }],
@@ -102,15 +148,16 @@ async function processTemplate(client, templateId, inputDir, outputDir) {
   const raw = response.content.find((b) => b.type === 'text')?.text ?? '';
   const parsed = JSON.parse(extractJSON(raw));
 
-  if (!parsed.html || !Array.isArray(parsed.schema?.sections)) {
-    throw new Error('Response missing required html or schema.sections');
+  if (!Array.isArray(parsed.schema?.sections)) {
+    throw new Error('Response missing required schema.sections');
   }
 
   const outDir = path.join(outputDir, templateId);
   await fs.mkdir(outDir, { recursive: true });
-  await copyAssets(path.join(inputDir, templateId), outDir);
+  await copyAssets(path.dirname(indexPath), outDir);
 
-  await fs.writeFile(path.join(outDir, 'index.html'), parsed.html, 'utf-8');
+  // Store original HTML as-is; token substitution happens at inject time
+  await fs.writeFile(path.join(outDir, 'index.html'), html, 'utf-8');
 
   const schema = {
     template_id: templateId,
@@ -161,11 +208,33 @@ async function main() {
   const manifest = [];
   const errors   = [];
   let done = 0;
+  let skipped = 0;
 
   await Promise.all(
     templateIds.map((id) =>
       limit(async () => {
         const n = ++done;
+        const schemaPath = path.join(resolvedOutput, id, 'schema.json');
+
+        // Resume: skip templates already successfully processed
+        const existing = await fs.readFile(schemaPath, 'utf-8').catch(() => null);
+        if (existing) {
+          try {
+            const schema = JSON.parse(existing);
+            const rel = (p) => path.relative(path.dirname(resolvedOutput), p).replace(/\\/g, '/');
+            manifest.push({
+              id,
+              name:     schema.name,
+              category: schema.category,
+              preview:  rel(path.join(resolvedOutput, id, 'index.html')),
+              schema:   rel(schemaPath),
+            });
+            skipped++;
+            console.log(`[${n}/${templateIds.length}] ${id} ... ⏭  (already done)`);
+            return;
+          } catch { /* fall through and reprocess */ }
+        }
+
         process.stdout.write(`[${n}/${templateIds.length}] ${id} ... `);
         try {
           const schema = await processTemplate(client, id, resolvedInput, resolvedOutput);
@@ -198,8 +267,8 @@ async function main() {
     console.log(`Errors  → ${ERRORS_LOG}  (${errors.length})`);
   }
 
-  const ok = templateIds.length - errors.length;
-  console.log(`\n${ok}/${templateIds.length} templates succeeded.`);
+  const ok = manifest.length;
+  console.log(`\n${ok}/${templateIds.length} templates succeeded (${skipped} already done, ${templateIds.length - ok - errors.length} no-html).`);
 }
 
 main().catch((err) => { console.error('Fatal:', err); process.exit(1); });
