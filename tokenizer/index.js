@@ -77,27 +77,61 @@ function extractJSON(text) {
   return text.trim();
 }
 
-const SKIP_DIRS = /[\\/](__MACOSX|[Dd]ocumentation|[Dd]ocs|[Dd]oc)[\\/]/;
+const SKIP_DIRS = /[\\/](__MACOSX|[Dd]ocumentation|[Dd]ocs|[Dd]oc|node_modules|vendors?|libs?|fonts?|templates|views|_layouts|_includes|_site)[\\/]/;
+const MAX_DEPTH = 6;
+// Fallback homepage names, in priority order, tried when no index.html exists
+const HOME_NAMES = ['home.html', 'index-1.html', 'index1.html', 'index-2.html', 'index2.html', 'landing.html', 'main.html', 'demo.html'];
+const DOC_NAMES = /^(documentation|changelog|credits?|readme|license|online docs)\b/i;
+// Server-side template markers: Django/Jinja/Twig/Liquid tags, PHP, Blade directives
+const SERVER_TEMPLATE = /\{%[\s\S]*?%\}|<\?php|@(extends|section|yield|include)\s*\(/;
+
+async function isStaticHtml(file) {
+  if (!/\.html?$/i.test(file) || /\.(blade|twig|jinja2?|j2|liquid|php)\./i.test(path.basename(file))) return false;
+  let html;
+  try { html = await fs.readFile(file, 'utf-8'); } catch { return false; }
+  if (!/<(html|body)[\s>]/i.test(html)) return false;
+  return !SERVER_TEMPLATE.test(html);
+}
 
 async function findIndexHtml(templateDir) {
+  // Collect candidate .html files in depth-first order, skipping docs/vendor/server-template dirs
+  const files = [];
   async function walk(dir, depth) {
-    if (depth > 5) return null;
+    if (depth > MAX_DEPTH) return;
     let entries;
-    try { entries = await fs.readdir(dir, { withFileTypes: true }); } catch { return null; }
-    if (entries.some((e) => !e.isDirectory() && e.name === 'index.html')) {
-      const candidate = path.join(dir, 'index.html');
-      if (!SKIP_DIRS.test(candidate + path.sep)) return candidate;
+    try { entries = await fs.readdir(dir, { withFileTypes: true }); } catch { return; }
+    for (const e of entries) {
+      if (!e.isDirectory() && /\.html?$/i.test(e.name) && !DOC_NAMES.test(e.name)) {
+        files.push({ file: path.join(dir, e.name), name: e.name.toLowerCase(), depth });
+      }
     }
     for (const entry of entries) {
       if (!entry.isDirectory()) continue;
       const sub = path.join(dir, entry.name);
-      if (SKIP_DIRS.test(sub + path.sep)) continue;
-      const found = await walk(sub, depth + 1);
-      if (found) return found;
+      // Test only the part inside the template, so the repo's own templates/ dir doesn't match
+      if (SKIP_DIRS.test(path.sep + path.relative(templateDir, sub) + path.sep)) continue;
+      await walk(sub, depth + 1);
     }
-    return null;
   }
-  return walk(templateDir, 0);
+  await walk(templateDir, 0);
+
+  // 1. index.html anywhere (first in depth-first order, as before)
+  for (const c of files) {
+    if (c.name === 'index.html' && await isStaticHtml(c.file)) return c.file;
+  }
+  // 2. Common homepage names, then index-<variant>.html; shallowest first, light/LTR variants first
+  const rank = (c) => {
+    const i = HOME_NAMES.indexOf(c.name);
+    if (i !== -1) return i;
+    return /^index[-_]?[\w-]+\.html?$/.test(c.name) ? HOME_NAMES.length + (/dark|rtl/.test(c.name) ? 1 : 0) : -1;
+  };
+  const ranked = files
+    .filter((c) => rank(c) !== -1)
+    .sort((a, b) => a.depth - b.depth || rank(a) - rank(b) || a.name.localeCompare(b.name));
+  for (const c of ranked) {
+    if (await isStaticHtml(c.file)) return c.file;
+  }
+  return null;
 }
 
 async function copyAssets(src, dest) {

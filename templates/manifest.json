@@ -105,6 +105,13 @@
     "schema": "processed/appzia-flutter-admin-panel-2026-01-25-04-16-58-utc/schema.json"
   },
   {
+    "id": "arcado-nft-portfolio-html-template-2025-05-07-12-39-54-utc",
+    "name": "Arcado Nft Portfolio Html Template 2025 05 07 12 39 54 Utc",
+    "category": "portfolio",
+    "preview": "processed/arcado-nft-portfolio-html-template-2025-05-07-12-39-54-utc/index.html",
+    "schema": "processed/arcado-nft-portfolio-html-template-2025-05-07-12-39-54-utc/schema.json"
+  },
+  {
     "id": "architecture-interior-design-html5-template-2026-01-01-08-34-24-utc",
     "name": "Architecture Interior Design Html5 Template 2026 01 01 08 34 24 Utc",
     "category": "agency",
@@ -173,6 +180,13 @@
     "category": "agency",
     "preview": "processed/crebiz-creative-portfolio-figma-template-2024-10-25-02-57-03-utc/index.html",
     "schema": "processed/crebiz-creative-portfolio-figma-template-2024-10-25-02-57-03-utc/schema.json"
+  },
+  {
+    "id": "dating-mobile-app-pwa-html-template-romio-2026-01-29-05-25-22-utc",
+    "name": "Dating Mobile App Pwa Html Template Romio 2026 01 29 05 25 22 Utc",
+    "category": "general",
+    "preview": "processed/dating-mobile-app-pwa-html-template-romio-2026-01-29-05-25-22-utc/index.html",
+    "schema": "processed/dating-mobile-app-pwa-html-template-romio-2026-01-29-05-25-22-utc/schema.json"
   },
   {
     "id": "dating-mobile-app-pwa-react-template-romio-2026-01-29-04-54-15-utc",
@@ -264,6 +278,13 @@
     "category": "portfolio",
     "preview": "processed/foxden-photography-portfolio-template-2025-06-23-07-18-22-utc/index.html",
     "schema": "processed/foxden-photography-portfolio-template-2025-06-23-07-18-22-utc/schema.json"
+  },
+  {
+    "id": "goru-electronics-e-commerce-html-template-2023-11-27-04-58-27-utc",
+    "name": "Goru Electronics E Commerce Html Template 2023 11 27 04 58 27 Utc",
+    "category": "ecommerce",
+    "preview": "processed/goru-electronics-e-commerce-html-template-2023-11-27-04-58-27-utc/index.html",
+    "schema": "processed/goru-electronics-e-commerce-html-template-2023-11-27-04-58-27-utc/schema.json"
   },
   {
     "id": "harold-react-19-personal-portfolio-template-2026-01-25-04-23-57-utc",
@@ -579,6 +600,13 @@
     "category": "general",
     "preview": "processed/saas-company-website-template-2024-10-16-13-20-25-utc/index.html",
     "schema": "processed/saas-company-website-template-2024-10-16-13-20-25-utc/schema.json"
+  },
+  {
+    "id": "sana-creative-multipurpose-html5-template-2024-08-01-10-36-16-utc",
+    "name": "Sana Creative Multipurpose Html5 Template 2024 08 01 10 36 16 Utc",
+    "category": "agency",
+    "preview": "processed/sana-creative-multipurpose-html5-template-2024-08-01-10-36-16-utc/index.html",
+    "schema": "processed/sana-creative-multipurpose-html5-template-2024-08-01-10-36-16-utc/schema.json"
   },
   {
     "id": "silva-flask-admin-dashboard-template-2026-01-26-04-22-17-utc",
