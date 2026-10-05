@@ -119,3 +119,7 @@ were tokenized from a server-side template or from a `node_modules` example page
 
 Resume skips them because their `schema.json` already exists, so they were left as they are. Recommendation: remove them from
 `templates/processed/` and `manifest.json`, or replace them with rendered output. Their previews will show raw `{% %}` tags or an unrelated page.
+
+**Done 2026-10-05:** the 17 were moved from `templates/processed/` to `templates/excluded/` (list in `excluded/IDS.txt`)
+and removed from `manifest.json` (105 → 88). A tokenizer re-run won't bring them back: the stricter finder rejects them.
+To restore one, render it properly (e.g. run the Flask/Django app and save `/`), put it in `raw/`, and re-run.

@@ -21,13 +21,6 @@
     "schema": "processed/adina-business-finance-react-jstemplate-2024-11-24-05-07-19-utc/schema.json"
   },
   {
-    "id": "adminto-flask-admin-dashboard-template-2026-01-21-13-21-05-utc",
-    "name": "Adminto Flask Admin Dashboard Template 2026 01 21 13 21 05 Utc",
-    "category": "general",
-    "preview": "processed/adminto-flask-admin-dashboard-template-2026-01-21-13-21-05-utc/index.html",
-    "schema": "processed/adminto-flask-admin-dashboard-template-2026-01-21-13-21-05-utc/schema.json"
-  },
-  {
     "id": "adova-creative-portfolio-template-2023-11-27-05-15-28-utc",
     "name": "Adova Creative Portfolio Template 2023 11 27 05 15 28 Utc",
     "category": "agency",
@@ -40,13 +33,6 @@
     "category": "corporate",
     "preview": "processed/advicx-business-consulting-codeigniter-template-2026-02-04-17-52-35-utc/index.html",
     "schema": "processed/advicx-business-consulting-codeigniter-template-2026-02-04-17-52-35-utc/schema.json"
-  },
-  {
-    "id": "advicx-django-business-consulting-template-2026-01-22-10-13-51-utc",
-    "name": "Advicx Django Business Consulting Template 2026 01 22 10 13 51 Utc",
-    "category": "corporate",
-    "preview": "processed/advicx-django-business-consulting-template-2026-01-22-10-13-51-utc/index.html",
-    "schema": "processed/advicx-django-business-consulting-template-2026-01-22-10-13-51-utc/schema.json"
   },
   {
     "id": "aeolla-creative-agency-portfolio-html-template-2026-02-04-07-00-43-utc",
@@ -117,13 +103,6 @@
     "category": "agency",
     "preview": "processed/architecture-interior-design-html5-template-2026-01-01-08-34-24-utc/index.html",
     "schema": "processed/architecture-interior-design-html5-template-2026-01-01-08-34-24-utc/schema.json"
-  },
-  {
-    "id": "artlink-django-landing-template-2026-01-20-05-08-17-utc",
-    "name": "Artlink Django Landing Template 2026 01 20 05 08 17 Utc",
-    "category": "general",
-    "preview": "processed/artlink-django-landing-template-2026-01-20-05-08-17-utc/index.html",
-    "schema": "processed/artlink-django-landing-template-2026-01-20-05-08-17-utc/schema.json"
   },
   {
     "id": "babet-pet-care-shop-html-template-2026-02-01-22-09-33-utc",
@@ -217,27 +196,6 @@
     "schema": "processed/digital-agency-creative-portfolio-template-2023-11-27-05-29-24-utc/schema.json"
   },
   {
-    "id": "domania-domain-for-sell-django-template-2026-01-20-05-06-17-utc",
-    "name": "Domania Domain For Sell Django Template 2026 01 20 05 06 17 Utc",
-    "category": "general",
-    "preview": "processed/domania-domain-for-sell-django-template-2026-01-20-05-06-17-utc/index.html",
-    "schema": "processed/domania-domain-for-sell-django-template-2026-01-20-05-06-17-utc/schema.json"
-  },
-  {
-    "id": "econest-ecology-environment-django-template-2026-02-02-10-05-34-utc",
-    "name": "Econest Ecology Environment Django Template 2026 02 02 10 05 34 Utc",
-    "category": "general",
-    "preview": "processed/econest-ecology-environment-django-template-2026-02-02-10-05-34-utc/index.html",
-    "schema": "processed/econest-ecology-environment-django-template-2026-02-02-10-05-34-utc/schema.json"
-  },
-  {
-    "id": "econest-ecology-environment-flask-template-2026-01-27-06-45-43-utc",
-    "name": "Econest Ecology Environment Flask Template 2026 01 27 06 45 43 Utc",
-    "category": "general",
-    "preview": "processed/econest-ecology-environment-flask-template-2026-01-27-06-45-43-utc/index.html",
-    "schema": "processed/econest-ecology-environment-flask-template-2026-01-27-06-45-43-utc/schema.json"
-  },
-  {
     "id": "eduall-tailwind-education-tutors-lms-online-2026-01-20-08-44-18-utc",
     "name": "Eduall Tailwind Education Tutors Lms Online 2026 01 20 08 44 18 Utc",
     "category": "education",
@@ -301,20 +259,6 @@
     "schema": "processed/helpy-angular-19-charity-fundraising-template-2026-01-18-05-20-37-utc/schema.json"
   },
   {
-    "id": "herozi-flask-admin-dashboard-template-2026-01-30-04-42-33-utc",
-    "name": "Herozi Flask Admin Dashboard Template 2026 01 30 04 42 33 Utc",
-    "category": "general",
-    "preview": "processed/herozi-flask-admin-dashboard-template-2026-01-30-04-42-33-utc/index.html",
-    "schema": "processed/herozi-flask-admin-dashboard-template-2026-01-30-04-42-33-utc/schema.json"
-  },
-  {
-    "id": "highdmin-django-admin-dashboard-template-2026-02-04-13-49-35-utc",
-    "name": "Highdmin Django Admin Dashboard Template 2026 02 04 13 49 35 Utc",
-    "category": "general",
-    "preview": "processed/highdmin-django-admin-dashboard-template-2026-02-04-13-49-35-utc/index.html",
-    "schema": "processed/highdmin-django-admin-dashboard-template-2026-02-04-13-49-35-utc/schema.json"
-  },
-  {
     "id": "horsera-horse-riding-school-club-html-template-2026-01-19-05-07-48-utc",
     "name": "Horsera Horse Riding School Club Html Template 2026 01 19 05 07 48 Utc",
     "category": "education",
@@ -350,20 +294,6 @@
     "schema": "processed/intereal-architecture-interior-design-html-tem-2026-01-22-10-27-56-utc/schema.json"
   },
   {
-    "id": "jobya-django-job-board-job-listing-template-2026-01-25-04-10-53-utc",
-    "name": "Jobya Django Job Board Job Listing Template 2026 01 25 04 10 53 Utc",
-    "category": "general",
-    "preview": "processed/jobya-django-job-board-job-listing-template-2026-01-25-04-10-53-utc/index.html",
-    "schema": "processed/jobya-django-job-board-job-listing-template-2026-01-25-04-10-53-utc/schema.json"
-  },
-  {
-    "id": "keyra-multi-chain-crypto-wallet-app-ui-ux-expo-2026-01-23-07-50-59-utc",
-    "name": "Keyra Multi Chain Crypto Wallet App Ui Ux Expo 2026 01 23 07 50 59 Utc",
-    "category": "general",
-    "preview": "processed/keyra-multi-chain-crypto-wallet-app-ui-ux-expo-2026-01-23-07-50-59-utc/index.html",
-    "schema": "processed/keyra-multi-chain-crypto-wallet-app-ui-ux-expo-2026-01-23-07-50-59-utc/schema.json"
-  },
-  {
     "id": "lahomes-flask-real-estate-admin-dashboard-theme-2026-01-21-06-27-29-utc",
     "name": "Lahomes Flask Real Estate Admin Dashboard Theme 2026 01 21 06 27 29 Utc",
     "category": "real-estate",
@@ -376,13 +306,6 @@
     "category": "general",
     "preview": "processed/larix-react-landing-page-template-2026-01-20-05-05-17-utc/index.html",
     "schema": "processed/larix-react-landing-page-template-2026-01-20-05-05-17-utc/schema.json"
-  },
-  {
-    "id": "lizehen-landing-page-flask-template-2026-01-25-04-21-57-utc",
-    "name": "Lizehen Landing Page Flask Template 2026 01 25 04 21 57 Utc",
-    "category": "general",
-    "preview": "processed/lizehen-landing-page-flask-template-2026-01-25-04-21-57-utc/index.html",
-    "schema": "processed/lizehen-landing-page-flask-template-2026-01-25-04-21-57-utc/schema.json"
   },
   {
     "id": "maze-agency-portfolio-html-template-2024-09-06-09-57-41-utc",
@@ -441,13 +364,6 @@
     "schema": "processed/monas-personal-portfolio-html-template-2025-07-28-18-20-27-utc/schema.json"
   },
   {
-    "id": "nafty-crypto-and-nft-flask-template-2026-01-21-06-01-21-utc",
-    "name": "Nafty Crypto And Nft Flask Template 2026 01 21 06 01 21 Utc",
-    "category": "general",
-    "preview": "processed/nafty-crypto-and-nft-flask-template-2026-01-21-06-01-21-utc/index.html",
-    "schema": "processed/nafty-crypto-and-nft-flask-template-2026-01-21-06-01-21-utc/schema.json"
-  },
-  {
     "id": "nazox-bootstrap-5-admin-dashboard-template-2026-02-04-05-34-21-utc",
     "name": "Nazox Bootstrap 5 Admin Dashboard Template 2026 02 04 05 34 21 Utc",
     "category": "general",
@@ -495,13 +411,6 @@
     "category": "general",
     "preview": "processed/open9-nft-marketplace-html-template-2024-09-11-08-50-51-utc/index.html",
     "schema": "processed/open9-nft-marketplace-html-template-2024-09-11-08-50-51-utc/schema.json"
-  },
-  {
-    "id": "opixo-django-landing-coming-soon-template-2026-02-04-14-01-32-utc",
-    "name": "Opixo Django Landing Coming Soon Template 2026 02 04 14 01 32 Utc",
-    "category": "general",
-    "preview": "processed/opixo-django-landing-coming-soon-template-2026-02-04-14-01-32-utc/index.html",
-    "schema": "processed/opixo-django-landing-coming-soon-template-2026-02-04-14-01-32-utc/schema.json"
   },
   {
     "id": "phone-and-gadget-repair-service-bootstrap-template-2025-06-06-06-21-40-utc",
@@ -609,13 +518,6 @@
     "schema": "processed/sana-creative-multipurpose-html5-template-2024-08-01-10-36-16-utc/schema.json"
   },
   {
-    "id": "silva-flask-admin-dashboard-template-2026-01-26-04-22-17-utc",
-    "name": "Silva Flask Admin Dashboard Template 2026 01 26 04 22 17 Utc",
-    "category": "general",
-    "preview": "processed/silva-flask-admin-dashboard-template-2026-01-26-04-22-17-utc/index.html",
-    "schema": "processed/silva-flask-admin-dashboard-template-2026-01-26-04-22-17-utc/schema.json"
-  },
-  {
     "id": "sintix-gaming-studio-html-template-2024-08-26-18-54-07-utc",
     "name": "Sintix Gaming Studio Html Template 2024 08 26 18 54 07 Utc",
     "category": "agency",
@@ -686,13 +588,6 @@
     "schema": "processed/ukko-react-portfolio-template-2023-11-27-05-27-51-utc/schema.json"
   },
   {
-    "id": "upbond-django-admin-dashboard-template-2026-01-25-04-13-57-utc",
-    "name": "Upbond Django Admin Dashboard Template 2026 01 25 04 13 57 Utc",
-    "category": "general",
-    "preview": "processed/upbond-django-admin-dashboard-template-2026-01-25-04-13-57-utc/index.html",
-    "schema": "processed/upbond-django-admin-dashboard-template-2026-01-25-04-13-57-utc/schema.json"
-  },
-  {
     "id": "upcube-codeigniter-admin-dashboard-template-2026-02-04-05-34-21-utc",
     "name": "Upcube Codeigniter Admin Dashboard Template 2026 02 04 05 34 21 Utc",
     "category": "general",
@@ -705,20 +600,6 @@
     "category": "general",
     "preview": "processed/wallo-multi-chain-crypto-wallet-2026-01-25-17-10-14-utc/index.html",
     "schema": "processed/wallo-multi-chain-crypto-wallet-2026-01-25-17-10-14-utc/schema.json"
-  },
-  {
-    "id": "wallo-multi-chain-crypto-wallet-ui-ux-expo-2026-01-22-16-42-24-utc",
-    "name": "Wallo Multi Chain Crypto Wallet Ui Ux Expo 2026 01 22 16 42 24 Utc",
-    "category": "general",
-    "preview": "processed/wallo-multi-chain-crypto-wallet-ui-ux-expo-2026-01-22-16-42-24-utc/index.html",
-    "schema": "processed/wallo-multi-chain-crypto-wallet-ui-ux-expo-2026-01-22-16-42-24-utc/schema.json"
-  },
-  {
-    "id": "webadmin-django-admin-dashboard-template-2026-01-25-04-05-55-utc",
-    "name": "Webadmin Django Admin Dashboard Template 2026 01 25 04 05 55 Utc",
-    "category": "general",
-    "preview": "processed/webadmin-django-admin-dashboard-template-2026-01-25-04-05-55-utc/index.html",
-    "schema": "processed/webadmin-django-admin-dashboard-template-2026-01-25-04-05-55-utc/schema.json"
   },
   {
     "id": "webfolio-creative-portfolio-react-js-template-2025-07-02-07-11-54-utc",
