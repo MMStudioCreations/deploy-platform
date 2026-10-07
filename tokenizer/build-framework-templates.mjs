@@ -75,8 +75,40 @@ function build(framework, dir, extraDeps = []) {
   // nuxi exits non-zero when any crawled sub-page fails to prerender; keep the export if the home page made it.
   try { run("npx nuxi generate", dir); } catch (err) {
     if (!fs.existsSync(path.join(dir, ".output", "public", "index.html"))) throw err;
+    // A failed prerender stops before the client bundle is copied into the export; copy it ourselves.
+    const client = path.join(dir, ".nuxt", "dist", "client", "_nuxt");
+    const target = path.join(dir, ".output", "public", "_nuxt");
+    if (!fs.existsSync(target) && fs.existsSync(client)) fs.cpSync(client, target, { recursive: true });
   }
   return fs.existsSync(path.join(dir, ".output", "public")) ? ".output/public" : "dist";
+}
+
+// Framework exports reference assets from the site root ("/_next/...", "/images/..."). That only works when the
+// site is served at a domain root; rewrite them to "./..." when the file exists, so previews work from any folder.
+function relativizeRootPaths(dir) {
+  const file = path.join(dir, "index.html");
+  const html = fs.readFileSync(file, "utf8");
+  const exists = (p) => fs.existsSync(path.join(dir, decodeURIComponent(p.split(/[?#]/)[0])));
+  const out = html
+    .replace(/(\s(?:src|href|poster|content)=["'])\/(?!\/)([^"'\s>]+)/g, (m, pre, p) => (exists(p) ? `${pre}./${p}` : m))
+    .replace(/(\ssrcset=["'])([^"']+)/g, (m, pre, list) =>
+      pre + list.replace(/(^|,\s*)\/(?!\/)([^\s,]+)/g, (mm, sep, p) => (exists(p) ? `${sep}./${p}` : mm)));
+  if (out !== html) fs.writeFileSync(file, out);
+  return out !== html;
+}
+
+// `--relativize`: only rewrite root paths in existing builds (raw/<id>/static-build and processed/<id>), then exit.
+if (process.argv[2] === "--relativize") {
+  for (const [prefix] of TARGETS) {
+    for (const base of [RAW, path.join(ROOT, "templates", "processed")]) {
+      const id = fs.readdirSync(base).find((d) => d.startsWith(prefix));
+      const dir = id && path.join(base, id, base === RAW ? "static-build" : "");
+      if (dir && fs.existsSync(path.join(dir, "index.html"))) {
+        console.log(`${relativizeRootPaths(dir) ? "rewrote " : "unchanged"} ${path.relative(ROOT, dir)}`);
+      }
+    }
+  }
+  process.exit(0);
 }
 
 const filter = process.argv[2];
@@ -110,6 +142,7 @@ for (const [prefix, sub, framework, extraDeps] of TARGETS) {
     }
     fs.cpSync(out, dest, { recursive: true });
     if (home !== "index.html") fs.copyFileSync(path.join(out, home), path.join(dest, "index.html"));
+    relativizeRootPaths(dest);
     results[id] = { ok: true, framework, output: `static-build/ (from ${outRel}, home page ${home})`, seconds: Math.round((Date.now() - started) / 1000) };
     console.log("ok");
   } catch (err) {
