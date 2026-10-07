@@ -7,6 +7,7 @@ dist/
 templates/raw/
 templates/processed/
 templates/excluded/
+templates/dropped/
 
 # Tokenizer runtime output
 tokenizer/logs/

@@ -94,6 +94,10 @@ async function isStaticHtml(file) {
 }
 
 async function findIndexHtml(templateDir) {
+  // 0. A static export made by build-framework-templates.mjs / render-php-templates.mjs wins
+  const built = path.join(templateDir, 'static-build', 'index.html');
+  if (await isStaticHtml(built)) return built;
+
   // Collect candidate .html files in depth-first order, skipping docs/vendor/server-template dirs
   const files = [];
   async function walk(dir, depth) {
@@ -176,9 +180,11 @@ function runClaudeCli(input) {
     '--no-session-persistence', '--model', 'sonnet',
     '--system-prompt', SYSTEM_PROMPT, '--output-format', 'text',
   ];
+  // The CLI backend runs on the claude.ai login; an ANTHROPIC_API_KEY loaded from .env would override it.
+  const { ANTHROPIC_API_KEY: _apiKey, ...env } = process.env;
   return new Promise((resolve, reject) => {
     const child = spawn(CLAUDE_BIN, args, {
-      env: { ...process.env, CLAUDE_CODE_MAX_OUTPUT_TOKENS: '32000' },
+      env: { ...env, CLAUDE_CODE_MAX_OUTPUT_TOKENS: '32000' },
       windowsHide: true,
     });
     let out = '';

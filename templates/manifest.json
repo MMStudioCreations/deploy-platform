@@ -42,6 +42,13 @@
     "schema": "processed/aeolla-creative-agency-portfolio-html-template-2026-02-04-07-00-43-utc/schema.json"
   },
   {
+    "id": "agenko-creative-digital-agency-php-template-2025-12-16-05-13-47-utc",
+    "name": "Agenko Creative Digital Agency Php Template 2025 12 16 05 13 47 Utc",
+    "category": "agency",
+    "preview": "processed/agenko-creative-digital-agency-php-template-2025-12-16-05-13-47-utc/index.html",
+    "schema": "processed/agenko-creative-digital-agency-php-template-2025-12-16-05-13-47-utc/schema.json"
+  },
+  {
     "id": "agiletech-codeigniter-it-technology-template-2026-01-22-03-58-33-utc",
     "name": "Agiletech Codeigniter It Technology Template 2026 01 22 03 58 33 Utc",
     "category": "general",
@@ -84,6 +91,13 @@
     "schema": "processed/apitex-mobile-banking-angular-app-pwa-2024-11-27-08-12-46-utc/schema.json"
   },
   {
+    "id": "applock-next-js-15-app-landing-page-template-2026-02-04-05-34-19-utc",
+    "name": "Applock Next Js 15 App Landing Page Template 2026 02 04 05 34 19 Utc",
+    "category": "general",
+    "preview": "processed/applock-next-js-15-app-landing-page-template-2026-02-04-05-34-19-utc/index.html",
+    "schema": "processed/applock-next-js-15-app-landing-page-template-2026-02-04-05-34-19-utc/schema.json"
+  },
+  {
     "id": "appzia-flutter-admin-panel-2026-01-25-04-16-58-utc",
     "name": "Appzia Flutter Admin Panel 2026 01 25 04 16 58 Utc",
     "category": "general",
@@ -105,6 +119,13 @@
     "schema": "processed/architecture-interior-design-html5-template-2026-01-01-08-34-24-utc/schema.json"
   },
   {
+    "id": "atroly-attorney-lawyer-react-nextjs-template-2026-01-18-18-36-44-utc",
+    "name": "Atroly Attorney Lawyer React Nextjs Template 2026 01 18 18 36 44 Utc",
+    "category": "corporate",
+    "preview": "processed/atroly-attorney-lawyer-react-nextjs-template-2026-01-18-18-36-44-utc/index.html",
+    "schema": "processed/atroly-attorney-lawyer-react-nextjs-template-2026-01-18-18-36-44-utc/schema.json"
+  },
+  {
     "id": "babet-pet-care-shop-html-template-2026-02-01-22-09-33-utc",
     "name": "Babet Pet Care Shop Html Template 2026 02 01 22 09 33 Utc",
     "category": "ecommerce",
@@ -119,11 +140,39 @@
     "schema": "processed/babun-business-finance-html5-rtl-template-2025-03-21-05-36-17-utc/schema.json"
   },
   {
+    "id": "baosh-digital-agency-php-template-2025-04-26-06-14-46-utc",
+    "name": "Baosh Digital Agency Php Template 2025 04 26 06 14 46 Utc",
+    "category": "agency",
+    "preview": "processed/baosh-digital-agency-php-template-2025-04-26-06-14-46-utc/index.html",
+    "schema": "processed/baosh-digital-agency-php-template-2025-04-26-06-14-46-utc/schema.json"
+  },
+  {
+    "id": "bentos-personal-portfolio-next-js-template-2026-02-04-15-58-05-utc",
+    "name": "Bentos Personal Portfolio Next Js Template 2026 02 04 15 58 05 Utc",
+    "category": "portfolio",
+    "preview": "processed/bentos-personal-portfolio-next-js-template-2026-02-04-15-58-05-utc/index.html",
+    "schema": "processed/bentos-personal-portfolio-next-js-template-2026-02-04-15-58-05-utc/schema.json"
+  },
+  {
+    "id": "borial-next-js-15-business-agency-template-2026-01-25-04-20-56-utc",
+    "name": "Borial Next Js 15 Business Agency Template 2026 01 25 04 20 56 Utc",
+    "category": "agency",
+    "preview": "processed/borial-next-js-15-business-agency-template-2026-01-25-04-20-56-utc/index.html",
+    "schema": "processed/borial-next-js-15-business-agency-template-2026-01-25-04-20-56-utc/schema.json"
+  },
+  {
     "id": "brevon-business-consulting-html-template-2026-01-19-04-50-13-utc",
     "name": "Brevon Business Consulting Html Template 2026 01 19 04 50 13 Utc",
     "category": "corporate",
     "preview": "processed/brevon-business-consulting-html-template-2026-01-19-04-50-13-utc/index.html",
     "schema": "processed/brevon-business-consulting-html-template-2026-01-19-04-50-13-utc/schema.json"
+  },
+  {
+    "id": "cargon-logistics-cargo-transportation-php-2026-02-04-17-39-31-utc",
+    "name": "Cargon Logistics Cargo Transportation Php 2026 02 04 17 39 31 Utc",
+    "category": "fitness",
+    "preview": "processed/cargon-logistics-cargo-transportation-php-2026-02-04-17-39-31-utc/index.html",
+    "schema": "processed/cargon-logistics-cargo-transportation-php-2026-02-04-17-39-31-utc/schema.json"
   },
   {
     "id": "churche-church-religion-charity-html-template-2026-01-22-11-33-10-utc",
@@ -145,6 +194,13 @@
     "category": "general",
     "preview": "processed/coinsafe-multi-chain-crypto-wallet-2026-01-25-17-17-16-utc/index.html",
     "schema": "processed/coinsafe-multi-chain-crypto-wallet-2026-01-25-17-17-16-utc/schema.json"
+  },
+  {
+    "id": "contis-ai-writer-copywriting-landing-page-reac-2024-07-15-08-50-31-utc",
+    "name": "Contis Ai Writer Copywriting Landing Page Reac 2024 07 15 08 50 31 Utc",
+    "category": "general",
+    "preview": "processed/contis-ai-writer-copywriting-landing-page-reac-2024-07-15-08-50-31-utc/index.html",
+    "schema": "processed/contis-ai-writer-copywriting-landing-page-reac-2024-07-15-08-50-31-utc/schema.json"
   },
   {
     "id": "creative-agency-creative-portfolio-2025-11-02-08-55-27-utc",
@@ -385,6 +441,13 @@
     "schema": "processed/nexora-multipurpose-business-html5-template-2026-02-04-05-17-13-utc/schema.json"
   },
   {
+    "id": "nino-next-js-personal-portfolio-template-2025-08-02-04-43-30-utc",
+    "name": "Nino Next Js Personal Portfolio Template 2025 08 02 04 43 30 Utc",
+    "category": "portfolio",
+    "preview": "processed/nino-next-js-personal-portfolio-template-2025-08-02-04-43-30-utc/index.html",
+    "schema": "processed/nino-next-js-personal-portfolio-template-2025-08-02-04-43-30-utc/schema.json"
+  },
+  {
     "id": "noir-creative-portfolio-html-template-2024-11-22-19-07-33-utc",
     "name": "Noir Creative Portfolio Html Template 2024 11 22 19 07 33 Utc",
     "category": "agency",
@@ -418,6 +481,13 @@
     "category": "general",
     "preview": "processed/phone-and-gadget-repair-service-bootstrap-template-2025-06-06-06-21-40-utc/index.html",
     "schema": "processed/phone-and-gadget-repair-service-bootstrap-template-2025-06-06-06-21-40-utc/schema.json"
+  },
+  {
+    "id": "piku-creative-saas-software-php-template-2025-05-17-05-27-37-utc",
+    "name": "Piku Creative Saas Software Php Template 2025 05 17 05 27 37 Utc",
+    "category": "agency",
+    "preview": "processed/piku-creative-saas-software-php-template-2025-05-17-05-27-37-utc/index.html",
+    "schema": "processed/piku-creative-saas-software-php-template-2025-05-17-05-27-37-utc/schema.json"
   },
   {
     "id": "pixelr-creative-agency-portfolio-html-template-2026-01-19-04-46-10-utc",
@@ -553,6 +623,13 @@
     "schema": "processed/techbutton-tailwind-css-3-button-html-template-2024-12-05-11-57-40-utc/schema.json"
   },
   {
+    "id": "techor-it-solution-technology-vue-nuxt-js-templ-2026-01-28-15-53-53-utc",
+    "name": "Techor It Solution Technology Vue Nuxt Js Templ 2026 01 28 15 53 53 Utc",
+    "category": "general",
+    "preview": "processed/techor-it-solution-technology-vue-nuxt-js-templ-2026-01-28-15-53-53-utc/index.html",
+    "schema": "processed/techor-it-solution-technology-vue-nuxt-js-templ-2026-01-28-15-53-53-utc/schema.json"
+  },
+  {
     "id": "the-agency-responsive-business-html-template-2023-11-27-05-13-56-utc",
     "name": "The Agency Responsive Business Html Template 2023 11 27 05 13 56 Utc",
     "category": "agency",
@@ -602,11 +679,25 @@
     "schema": "processed/wallo-multi-chain-crypto-wallet-2026-01-25-17-10-14-utc/schema.json"
   },
   {
+    "id": "webfolio-creative-portfolio-nuxt-js-template-2025-03-06-15-29-40-utc",
+    "name": "Webfolio Creative Portfolio Nuxt Js Template 2025 03 06 15 29 40 Utc",
+    "category": "agency",
+    "preview": "processed/webfolio-creative-portfolio-nuxt-js-template-2025-03-06-15-29-40-utc/index.html",
+    "schema": "processed/webfolio-creative-portfolio-nuxt-js-template-2025-03-06-15-29-40-utc/schema.json"
+  },
+  {
     "id": "webfolio-creative-portfolio-react-js-template-2025-07-02-07-11-54-utc",
     "name": "Webfolio Creative Portfolio React Js Template 2025 07 02 07 11 54 Utc",
     "category": "agency",
     "preview": "processed/webfolio-creative-portfolio-react-js-template-2025-07-02-07-11-54-utc/index.html",
     "schema": "processed/webfolio-creative-portfolio-react-js-template-2025-07-02-07-11-54-utc/schema.json"
+  },
+  {
+    "id": "xpovio-digital-creative-agencytemplate-2025-11-06-16-16-45-utc",
+    "name": "Xpovio Digital Creative Agencytemplate 2025 11 06 16 16 45 Utc",
+    "category": "agency",
+    "preview": "processed/xpovio-digital-creative-agencytemplate-2025-11-06-16-16-45-utc/index.html",
+    "schema": "processed/xpovio-digital-creative-agencytemplate-2025-11-06-16-16-45-utc/schema.json"
   },
   {
     "id": "zelio-personal-portfolio-nextjs-react-template-2026-01-14-14-25-32-utc",

@@ -123,3 +123,35 @@ Resume skips them because their `schema.json` already exists, so they were left 
 **Done 2026-10-05:** the 17 were moved from `templates/processed/` to `templates/excluded/` (list in `excluded/IDS.txt`)
 and removed from `manifest.json` (105 → 88). A tokenizer re-run won't bring them back: the stricter finder rejects them.
 To restore one, render it properly (e.g. run the Flask/Django app and save `/`), put it in `raw/`, and re-run.
+
+## Framework pass (2026-10-06/07)
+
+Approved plan: drop what can never be a site, build what Node/PHP can render, defer the rest.
+
+**Dropped (22):** the 16 Figma/PSD design files, 2 React Native apps (chainex, keyra), aviator (empty), pixy (broken
+extraction), gstore (email), team-member (component pack). Moved to `templates/dropped/` (list in `dropped/IDS.txt`).
+
+**Built to static HTML (15),** written to `templates/raw/<id>/static-build/`, which the tokenizer's finder now checks first:
+
+- `tokenizer/build-framework-templates.mjs`: Next.js static export (`output: 'export'`, unoptimized images), Gatsby build,
+  `nuxi generate`. Each project is installed with `--ignore-scripts` in a scratch copy under `%TEMP%/dp-template-builds`,
+  so `raw/` never gets `node_modules`. Built: applock, atroly, bentos, borial, contis, nino, techor (partial prerender,
+  home page fine), webfolio, plus nuur and seox (see below). Log: `tokenizer/logs/framework-builds.json`.
+- `tokenizer/render-php-templates.mjs`: serves each project with `php -S` (PHP 8.3, installed via winget) and saves every
+  top-level page as HTML with `.php` links rewritten. Built: agenko, baosh, cargon, piku (Light), xpovio.
+  Log: `tokenizer/logs/php-renders.json`.
+
+**Built but unusable (2):** nuur and seox render their content entirely in the browser; the exported HTML is an empty
+shell. The tokenizer still found the shell pages, so their processed output was moved to `templates/excluded/` and
+removed from the manifest, and the shell builds were deleted. Would need a headless-browser DOM capture.
+
+**Failed, deferred (3):** naru and nemu (dynamic `[slug]` routes without `generateStaticParams`, so Next refuses a
+static export), current (Gatsby fails rendering `/about/` on Windows). Also deferred: pixigon (PHP + a Vite asset build),
+nubia (Jekyll; no Ruby installed), martplace (needs a database), the 2 PHP admin dashboards, and all Laravel, CakePHP,
+Symfony, ASP.NET and Yii templates (14).
+
+**Result:** 13 new templates in `manifest.json` (88 → 101): agenko, applock, atroly, baosh, bentos, borial, cargon,
+contis, nino, piku, techor, webfolio, xpovio.
+
+Tokenizer fix in the same pass: the `claude-cli` backend now strips `ANTHROPIC_API_KEY` (loaded from `.env`) from the
+CLI's environment, so it runs on the claude.ai login as intended instead of failing on the key.
