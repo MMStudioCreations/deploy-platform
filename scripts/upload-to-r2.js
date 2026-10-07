@@ -1,6 +1,11 @@
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+// Uploads a local folder to the bymamstudio-templates R2 bucket.
+//   node upload-to-r2.js                                   templates/raw -> bucket root (original use)
+//   node upload-to-r2.js --dir ../templates/processed --prefix gallery/processed/
+//   node upload-to-r2.js --file ../templates/gallery.html --key gallery/index.html
+// Files already in the bucket with the same size are skipped, so re-runs only send what changed.
+import { S3Client, PutObjectCommand, ListObjectsV2Command } from "@aws-sdk/client-s3";
 import { readdir, readFile, stat } from "fs/promises";
-import { join, relative, extname } from "path";
+import { join, relative, extname, resolve } from "path";
 import { fileURLToPath } from "url";
 import { config } from "dotenv";
 
@@ -8,7 +13,11 @@ config();
 
 const BUCKET = "bymamstudio-templates";
 const CONCURRENCY = 10;
-const TEMPLATES_DIR = join(fileURLToPath(import.meta.url), "../../templates/raw");
+const argv = process.argv.slice(2);
+const arg = (name) => (argv.includes(name) ? argv[argv.indexOf(name) + 1] : null);
+const TEMPLATES_DIR = arg("--dir") ? resolve(arg("--dir")) : join(fileURLToPath(import.meta.url), "../../templates/raw");
+const PREFIX = arg("--prefix") || "";
+const keyFor = (filePath) => PREFIX + relative(TEMPLATES_DIR, filePath).replace(/\\/g, "/");
 
 const CONTENT_TYPES = {
   ".html": "text/html",
@@ -104,14 +113,34 @@ async function main() {
     },
   });
 
+  if (arg("--file")) {
+    await uploadFile(client, resolve(arg("--file")), arg("--key"), 1, 1);
+    console.log("Done.");
+    return;
+  }
+
   console.log(`Scanning ${TEMPLATES_DIR} ...`);
-  const files = await collectFiles(TEMPLATES_DIR);
+  const all = await collectFiles(TEMPLATES_DIR);
+
+  // Skip files already uploaded with the same size
+  const existing = new Map();
+  let token;
+  do {
+    const page = await client.send(new ListObjectsV2Command({ Bucket: BUCKET, Prefix: PREFIX, ContinuationToken: token }));
+    for (const o of page.Contents || []) existing.set(o.Key, o.Size);
+    token = page.IsTruncated ? page.NextContinuationToken : undefined;
+  } while (token);
+  const files = [];
+  for (const f of all) {
+    if (existing.get(keyFor(f)) !== (await stat(f)).size) files.push(f);
+  }
+  console.log(`${all.length} files, ${all.length - files.length} already uploaded.`);
   const total = files.length;
   console.log(`Found ${total} files. Uploading with concurrency=${CONCURRENCY}\n`);
 
   let index = 0;
   const tasks = files.map((filePath) => async () => {
-    const key = relative(TEMPLATES_DIR, filePath).replace(/\\/g, "/");
+    const key = keyFor(filePath);
     await uploadFile(client, filePath, key, ++index, total);
   });
 

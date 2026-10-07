@@ -1,0 +1,14 @@
+name = "template-gallery"
+main = "src/index.js"
+compatibility_date = "2026-05-01"
+workers_dev = true
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "bymamstudio-templates"
+
+# Filled in after Cloudflare Access is enabled for this Worker (see README.md).
+# Both are identifiers, not secrets. Until they're set, every request gets 403.
+[vars]
+TEAM_DOMAIN = ""   # e.g. "mamstudio.cloudflareaccess.com"
+POLICY_AUD = ""    # the Access application's "Application Audience (AUD) Tag"
