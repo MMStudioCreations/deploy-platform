@@ -16,5 +16,5 @@ tokenizer/errors.log
 # OS
 .DS_Store
 Thumbs.db
-tokenizer/run-cli.log
+tokenizer/run-cli*.log
 templates/gallery.html
